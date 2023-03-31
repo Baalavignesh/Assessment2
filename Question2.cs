@@ -23,11 +23,6 @@ namespace Licence_Plate
                 _AllNames.Add(OtherName);
             }
             this._AllNames.Add(name);
-
-            foreach ( var item in _AllNames) 
-            {
-                Console.WriteLine(item);
-            }
         }
 
 
@@ -37,10 +32,9 @@ namespace Licence_Plate
             _AllNames.Sort();
 
             int myPosition = _AllNames.IndexOf(this._Name);
-            Console.WriteLine(myPosition);
             int groups = (myPosition + this._AgentsAvailable) / this._AgentsAvailable;
 
-            Console.WriteLine($"Wait Time is {groups * 20}");
+            Console.WriteLine($"\n{this._Name} your Wait Time is {groups * 20}");
 
             return groups * 20;
 
